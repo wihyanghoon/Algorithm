@@ -1,12 +1,12 @@
 function solution(s) {
     var answer = '';
-    // 짝수일때 실행할 로직
-    if(s.length % 2 === 0) {
-        const index = Math.ceil(s.length / 2);
-        return answer = s[index - 1]+s[index];
-    // 홀수일때 실해할 로직
+    var mid = Math.floor(s.length/2);
+    
+    if(s.length % 2 === 1) {
+        answer = s.substring(mid, mid + 1);
     } else {
-        const index = Math.floor(s.length / 2);
-        return answer = s[index];
+        answer = s.substring(mid - 1, mid + 1);
     }
+    
+    return answer
 }
